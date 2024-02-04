@@ -64,9 +64,6 @@ const plugins = [
     options: {
       applicationId: process.env.ALGOLIA_APP_ID,
       adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY,
-      settings: {
-        // index settings...
-      },
     },
   },
 ];

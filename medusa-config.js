@@ -35,13 +35,13 @@ const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 const plugins = [
   `medusa-fulfillment-manual`,
-  // `medusa-payment-manual`,
-  // {
-  //   resolve: `@medusajs/file-local`,
-  //   options: {
-  //     upload_dir: "uploads",
-  //   },
-  // },
+  `medusa-payment-manual`,
+  {
+    resolve: `@medusajs/file-local`,
+    options: {
+      upload_dir: "uploads",
+    },
+  },
   {
     resolve: "@medusajs/admin",
     /** @type {import('@medusajs/admin').PluginOptions} */
@@ -69,9 +69,9 @@ const plugins = [
         secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
         cache_control: process.env.S3_CACHE_CONTROL,
         // optional
-        // download_file_duration:
-        //   process.env.S3_DOWNLOAD_FILE_DURATION,
-        // prefix: process.env.S3_PREFIX,
+        download_file_duration:
+            process.env.S3_DOWNLOAD_FILE_DURATION,
+            prefix: process.env.S3_PREFIX,
     },
   },
 

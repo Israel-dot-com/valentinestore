@@ -86,9 +86,6 @@ const plugins = [
           searchableAttributes: ["title", "description"],
           attributesToRetrieve: ["title", "description", "price", "id", "thumbnail", "handle"],
         },
-        transformer: (product) => ({ 
-          objectID: product.id, 
-        }),
       },
     },
     },

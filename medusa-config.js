@@ -81,10 +81,10 @@ const plugins = [
       applicationId: process.env.ALGOLIA_APP_ID,
       adminApiKey: process.env.ALGOLIA_ADMIN_API_KEY,
       settings: {
-      indexName: {
+      products: {
         indexSettings: {
-          searchableAttributes,
-          attributesToRetrieve,
+          searchableAttributes: ["title", "description"],
+          attributesToRetrieve: ["title", "description", "price", "id", "thumbnail", "handle"],
         },
         transformer: (product) => ({ 
           objectID: product.id, 

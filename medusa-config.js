@@ -45,16 +45,15 @@ const plugins = [
         cache_control: process.env.S3_CACHE_CONTROL,
     },
   },
-  {
-    resolve: `medusa-file-minio`,
-    options: {
-        endpoint: process.env.MINIO_ENDPOINT,
-        bucket: process.env.MINIO_BUCKET,
-        access_key_id: process.env.MINIO_ACCESS_KEY,
-        secret_access_key: process.env.MINIO_SECRET_KEY,
-    },
-  },
-
+  // {
+  //   resolve: `medusa-file-minio`,
+  //   options: {
+  //       endpoint: process.env.MINIO_ENDPOINT,
+  //       bucket: process.env.MINIO_BUCKET,
+  //       access_key_id: process.env.MINIO_ACCESS_KEY,
+  //       secret_access_key: process.env.MINIO_SECRET_KEY,
+  //   },
+  // },
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   {

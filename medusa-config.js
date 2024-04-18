@@ -83,7 +83,14 @@ const plugins = [
         products: {
           indexSettings: {
             searchableAttributes: ["title", "description"],
-            attributesToRetrieve: ["title", "description", "price", "id", "thumbnail", "handle"],
+            attributesToRetrieve: [
+              "title", 
+              "description", 
+              "price", 
+              "id", 
+              "thumbnail", 
+              "handle"
+            ],
           },
         },
       },
